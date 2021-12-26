@@ -14,89 +14,128 @@ class CategoryPage extends StatelessWidget {
       ),
       backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              child: Text(
-                'Pick Category',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Text(
+                  'Pick Category',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-            ),
-            SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.green),
-                    onPressed: () {},
-                    child: Text('History'),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'History',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.red),
-                    onPressed: () {},
-                    child: Text('Sport'),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'Sport',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.red),
-                    onPressed: () {},
-                    child: Text('Music'),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'Music',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.red),
-                    onPressed: () {},
-                    child: Text('Animals'),
+                ],
+              ),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'Animals',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.red),
-                    onPressed: () {},
-                    child: Text('Movies'),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'Movies',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: ElevatedButton(
-                    // style: ElevatedButton.styleFrom(primary: Colors.red),
-                    onPressed: () {},
-                    child: Text('Geography'),
+                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(primary: Colors.amber),
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                      },
+                      child: Text(
+                        'Geography',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

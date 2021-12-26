@@ -59,11 +59,16 @@ class MainPage extends StatelessWidget {
                 height: 100,
                 width: 200,
                 child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => CategoryPage()));
-                    },
-                    child: Text('Press to pick category')),
+                  style: ElevatedButton.styleFrom(primary: Colors.amber),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => CategoryPage()));
+                  },
+                  child: Text(
+                    'Press to pick category',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
               )
             ],
           ),
