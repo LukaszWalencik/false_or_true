@@ -1,4 +1,4 @@
-import 'package:false_or_true/questions_pages/FirstQuestionPage.dart';
+import 'package:false_or_true/app/pick_category_page/category_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -29,22 +29,44 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'False or True Game',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.amber,
+      ),
       backgroundColor: Colors.black,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'False or True game',
-              style: TextStyle(color: Colors.white),
-            ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => PickCategoryPage()));
-                },
-                child: Text('Press to pick category'))
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Welcome in my simple\n "False or True" game.',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              SizedBox(
+                height: 100,
+                width: 200,
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => CategoryPage()));
+                    },
+                    child: Text('Press to pick category')),
+              )
+            ],
+          ),
         ),
       ),
     );
