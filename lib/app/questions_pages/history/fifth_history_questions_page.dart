@@ -1,23 +1,25 @@
-import 'package:false_or_true/app/pick_category_page/category_page.dart';
+import 'package:false_or_true/app/questions_pages/history/fourth_history_questions_page.dart';
+import 'package:false_or_true/app/questions_pages/history/history_end_page.dart';
 import 'package:flutter/material.dart';
 
-class HistoryQuestionsPage extends StatefulWidget {
-  const HistoryQuestionsPage({
+class FifthHistoryQuestionsPage extends StatefulWidget {
+  const FifthHistoryQuestionsPage({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<HistoryQuestionsPage> createState() => _HistoryQuestionsPageState();
+  State<FifthHistoryQuestionsPage> createState() =>
+      _FifthHistoryQuestionsPage();
 }
 
-class _HistoryQuestionsPageState extends State<HistoryQuestionsPage> {
+class _FifthHistoryQuestionsPage extends State<FifthHistoryQuestionsPage> {
   var answear = null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Question 1/5'),
+        title: Text('Question 5/5'),
         backgroundColor: Colors.amber,
       ),
       backgroundColor: Colors.black,
@@ -27,7 +29,7 @@ class _HistoryQuestionsPageState extends State<HistoryQuestionsPage> {
           children: [
             Container(
               child: Text(
-                'First Question',
+                'Fifth Question',
                 style: TextStyle(color: Colors.white),
               ),
             ),
@@ -68,7 +70,7 @@ class _HistoryQuestionsPageState extends State<HistoryQuestionsPage> {
                   Column(
                     children: [
                       Text(
-                        'Prawda',
+                        'True',
                         style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
@@ -78,7 +80,7 @@ class _HistoryQuestionsPageState extends State<HistoryQuestionsPage> {
                       ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => CategoryPage()));
+                                builder: (_) => HistoryEndQuestionsPage()));
                           },
                           child: Text('Next question')),
                     ],
@@ -97,7 +99,7 @@ class _HistoryQuestionsPageState extends State<HistoryQuestionsPage> {
                       ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => CategoryPage()));
+                                builder: (_) => HistoryEndQuestionsPage()));
                           },
                           child: Text('Next question')),
                     ],

@@ -1,4 +1,4 @@
-import 'package:false_or_true/app/questions_pages/history_questions_page.dart';
+import 'package:false_or_true/app/questions_pages/history/first_history_questions_page.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -41,7 +41,7 @@ class CategoryPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(primary: Colors.amber),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (_) => HistoryQuestionsPage()));
+                            builder: (_) => FirstHistoryQuestionsPage()));
                       },
                       child: Text(
                         'History',
@@ -57,7 +57,7 @@ class CategoryPage extends StatelessWidget {
                       style: ElevatedButton.styleFrom(primary: Colors.amber),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (_) => HistoryQuestionsPage()));
+                            builder: (_) => FirstHistoryQuestionsPage()));
                       },
                       child: Text(
                         'Sport',
