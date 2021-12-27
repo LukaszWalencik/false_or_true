@@ -1,3 +1,4 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:false_or_true/app/pick_category_page/category_page.dart';
 import 'package:flutter/material.dart';
 
@@ -38,39 +39,53 @@ class MainPage extends StatelessWidget {
         backgroundColor: Colors.amber,
       ),
       backgroundColor: Colors.black,
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Welcome in my simple\n "False or True" game.',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-              SizedBox(
-                height: 100,
-              ),
-              SizedBox(
-                height: 100,
-                width: 200,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.amber),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => CategoryPage()));
-                  },
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/question.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                BorderedText(
+                  strokeWidth: 2.0,
                   child: Text(
-                    'Press to pick category',
-                    style: TextStyle(color: Colors.black),
+                    'Welcome in my simple\n "False or True" game.',
+                    style: TextStyle(
+                      color: Colors.amber,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
-              )
-            ],
+                SizedBox(
+                  height: 100,
+                ),
+                SizedBox(
+                  height: 80,
+                  width: 250,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Colors.amber),
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => CategoryPage()));
+                    },
+                    child: Text(
+                      'Press to pick category',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
