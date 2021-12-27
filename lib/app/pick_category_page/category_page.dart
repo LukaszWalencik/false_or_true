@@ -1,3 +1,4 @@
+import 'package:false_or_true/app/questions_pages/history_questions_page.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatelessWidget {
@@ -9,6 +10,7 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Categories'),
         backgroundColor: Colors.amber,
       ),
@@ -38,8 +40,8 @@ class CategoryPage extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: Colors.amber),
                       onPressed: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => HistoryQuestionsPage()));
                       },
                       child: Text(
                         'History',
@@ -54,8 +56,8 @@ class CategoryPage extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: Colors.amber),
                       onPressed: () {
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (_) => CategoryPage()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => HistoryQuestionsPage()));
                       },
                       child: Text(
                         'Sport',
